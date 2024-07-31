@@ -968,6 +968,8 @@ AddOutputFilter chunkFilter
 			<Item Name="Flow Limit.lvclass" Type="LVClass" URL="../../../bls-capabilities/src/Capabilities/Low Level Capabilities/Flow/Flow Limit/Flow Limit.lvclass"/>
 			<Item Name="Flow Gradient.lvclass" Type="LVClass" URL="../../../bls-capabilities/src/Capabilities/Low Level Capabilities/Flow/Flow Gradient/Flow Gradient.lvclass"/>
 			<Item Name="Flow Actual Value.lvclass" Type="LVClass" URL="../../../bls-capabilities/src/Capabilities/Low Level Capabilities/Flow/Flow Actual Value/Flow Actual Value.lvclass"/>
+			<Item Name="Control Mode.lvclass" Type="LVClass" URL="../../../bls-capabilities/src/Capabilities/Low Level Capabilities/Control Mode/Control Mode.lvclass"/>
+			<Item Name="Output Enable.lvclass" Type="LVClass" URL="../../../bls-capabilities/src/Capabilities/Low Level Capabilities/Output Enable/Output Enable.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="BLS Chiller Template" Type="Packed Library">
