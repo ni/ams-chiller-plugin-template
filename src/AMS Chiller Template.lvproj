@@ -779,7 +779,6 @@ AddOutputFilter chunkFilter
 				<Item Name="AdasLvTemplateOutOfBand_Queue.lvlib" Type="Library" URL="/&lt;vilib&gt;/ADAS Replay HIL/ADAS Plugin Utilities/AdasLvTemplateOutOfBand_Queue/AdasLvTemplateOutOfBand_Queue.lvlib"/>
 				<Item Name="Is Value Changed.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Is Value Changed.vim"/>
 				<Item Name="JDP Utility.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/JDP Utility.lvlib"/>
-				<Item Name="JSONtext.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/JSONtext.lvlib"/>
 				<Item Name="Tag Wrapper.lvlib" Type="Library" URL="/&lt;vilib&gt;/ADAS Replay HIL/Channels/Tag Wrapper/Tag Wrapper.lvlib"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
