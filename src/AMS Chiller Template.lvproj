@@ -598,7 +598,6 @@
 			<Item Name="provcom_GetProvidersDirPseudo.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_GetProvidersDirPseudo.vi"/>
 			<Item Name="mxLvGetItemRef.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvGetItemRef.vi"/>
 			<Item Name="_LaunchHelpUrl.vi" Type="VI" URL="/&lt;helpdir&gt;/_LaunchHelpUrl.vi"/>
-			<Item Name="9c1d1a77308d2a44" Type="VI" URL="/&lt;resource&gt;/9c1d1a77308d2a44"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
@@ -716,6 +715,10 @@ AddOutputFilter chunkFilter
 			<Item Name="Test AMS Chiller Template UI.vi" Type="VI" URL="../Tests/Test AMS Chiller Template UI.vi"/>
 			<Item Name="Create Config JSON.vi" Type="VI" URL="../Tests/Create Config JSON.vi"/>
 		</Item>
+		<Item Name="Simulation" Type="Folder">
+			<Item Name="Apply Gradient.vi" Type="VI" URL="../Simulation/Apply Gradient.vi"/>
+			<Item Name="Channel Simu.vi" Type="VI" URL="../Simulation/Channel Simu.vi"/>
+		</Item>
 		<Item Name="AMS Chiller Template.lvlib" Type="Library" URL="../Plugin/AMS Chiller Template.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -777,9 +780,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="AdasLvTemplateOutOfBand_Queue.lvlib" Type="Library" URL="/&lt;vilib&gt;/ADAS Replay HIL/ADAS Plugin Utilities/AdasLvTemplateOutOfBand_Queue/AdasLvTemplateOutOfBand_Queue.lvlib"/>
-				<Item Name="Is Value Changed.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Is Value Changed.vim"/>
 				<Item Name="JDP Utility.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/JDP Utility.lvlib"/>
-				<Item Name="Tag Wrapper.lvlib" Type="Library" URL="/&lt;vilib&gt;/ADAS Replay HIL/Channels/Tag Wrapper/Tag Wrapper.lvlib"/>
 				<Item Name="JSONtext.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/JSONtext.lvlib"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
 				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
@@ -816,8 +817,6 @@ AddOutputFilter chunkFilter
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
-			<Item Name="Chiller.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/High Level Capabilities/Chiller/Chiller.lvclass"/>
-			<Item Name="Apply Gradient.vi" Type="VI" URL="../Apply Gradient.vi"/>
 			<Item Name="evoPluginSDK.lvlibp" Type="LVLibp" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoPluginSDK.lvlibp">
 				<Item Name="EventData" Type="Folder">
 					<Item Name="ExecuteEventData.ctl" Type="VI" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoPluginSDK.lvlibp/VIs/EventData/ExecuteEventData.ctl"/>
@@ -927,6 +926,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WrapperHelpers.lvlib" Type="Library" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoPluginWrapperSDK.lvlibp/WrapperHelpers/WrapperHelpers.lvlib"/>
 			</Item>
 			<Item Name="EVOXDataAccessors.lvlib" Type="Library" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoXDataAccessors.llb/EVOXDataAccessors.lvlib"/>
+			<Item Name="Utilities.lvlib" Type="Library" URL="../../Capabilities/Capabilities/Utilities/Utilities.lvlib"/>
 			<Item Name="evoBlockPlugin.lvlibp" Type="LVLibp" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp">
 				<Item Name="BlockWrapper" Type="Folder">
 					<Item Name="DirectCall" Type="Folder">
@@ -949,29 +949,8 @@ AddOutputFilter chunkFilter
 				<Item Name="BlockPluginInterface.2023.1.lvclass" Type="LVClass" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp/evoBlockPlugin/BlockPluginInterface.2023.1/BlockPluginInterface.2023.1.lvclass"/>
 				<Item Name="WrapperHelpers.lvlib" Type="Library" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp/WrapperHelpers/WrapperHelpers.lvlib"/>
 			</Item>
-			<Item Name="OnOff.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/OnOff/OnOff.lvclass"/>
-			<Item Name="Utilities.lvlib" Type="Library" URL="../../Capabilities/Capabilities/Utilities/Utilities.lvlib"/>
-			<Item Name="Capabilities.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Capabilities.lvclass"/>
-			<Item Name="Error.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Error/Error.lvclass"/>
-			<Item Name="Error Channels.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Error Channels/Error Channels.lvclass"/>
-			<Item Name="Temperature Actual Value.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Actual Value/Temperature Actual Value.lvclass"/>
-			<Item Name="Actual Value.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Actual Value/Actual Value.lvclass"/>
-			<Item Name="Temperature Gradient.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Gradient/Temperature Gradient.lvclass"/>
-			<Item Name="Gradient.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Gradient/Gradient.lvclass"/>
-			<Item Name="Temperature Limit.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Limit/Temperature Limit.lvclass"/>
-			<Item Name="Limit.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Limit/Limit.lvclass"/>
-			<Item Name="Temperature Setpoint.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Setpoint/Temperature Setpoint.lvclass"/>
-			<Item Name="Setpoint.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Setpoint/Setpoint.lvclass"/>
-			<Item Name="Pressure Actual Value.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Pressure/Pressure Actual Value/Pressure Actual Value.lvclass"/>
-			<Item Name="Pressure Gradient.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Pressure/Pressure Gradient/Pressure Gradient.lvclass"/>
-			<Item Name="Pressure Limit.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Pressure/Pressure Limit/Pressure Limit.lvclass"/>
-			<Item Name="Pressure Setpoint.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Pressure/Pressure Setpoint/Pressure Setpoint.lvclass"/>
-			<Item Name="Flow Setpoint.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Flow/Flow Setpoint/Flow Setpoint.lvclass"/>
-			<Item Name="Flow Limit.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Flow/Flow Limit/Flow Limit.lvclass"/>
-			<Item Name="Flow Gradient.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Flow/Flow Gradient/Flow Gradient.lvclass"/>
-			<Item Name="Flow Actual Value.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Flow/Flow Actual Value/Flow Actual Value.lvclass"/>
-			<Item Name="Control Mode.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Control Mode/Control Mode.lvclass"/>
-			<Item Name="Output Enable.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Output Enable/Output Enable.lvclass"/>
+			<Item Name="Chiller Cluster.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/High Level Capabilities/Chiller Cluster/Chiller Cluster.lvclass"/>
+			<Item Name="Create Asset JSON.vi" Type="VI" URL="../../Capabilities/Create Asset JSON.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="AMS Chiller Template" Type="Packed Library">
@@ -985,9 +964,9 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_preActionVIID" Type="Ref">/My Computer/Pre-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D97CD1D6-D13C-4DB8-9216-011E18E426CA}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/usr/lib/x86_64-linux-gnu/ni-evo-engine/plugins</Property>
-				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">AMS Chiller Template.1.0.lvlibp</Property>
-				<Property Name="Destination[0].path" Type="Path">/usr/lib/x86_64-linux-gnu/ni-evo-engine/plugins/AMS Chiller Template.1.0.lvlibp</Property>
+				<Property Name="Bld_version.major" Type="Int">2</Property>
+				<Property Name="Destination[0].destName" Type="Str">AMS Chiller Template.2.0.lvlibp</Property>
+				<Property Name="Destination[0].path" Type="Path">/usr/lib/x86_64-linux-gnu/ni-evo-engine/plugins/AMS Chiller Template.2.0.lvlibp</Property>
 				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
@@ -995,7 +974,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Destination[1].path" Type="Path">/usr/lib/x86_64-linux-gnu/ni-evo-engine/plugins</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{678C2CEB-DC15-455D-B9BE-673D87028795}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{1D6B8503-BB8C-4C13-8886-DF924AC5F5C1}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/RT PXI Target/AMS Chiller Template.lvlib</Property>
@@ -1012,7 +991,7 @@ AddOutputFilter chunkFilter
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2022 NI</Property>
 				<Property Name="TgtF_productName" Type="Str">AMS Chiller Template</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{E1985B85-F159-441F-9EAD-7499C0C5512C}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">AMS Chiller Template.1.0.lvlibp</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">AMS Chiller Template.2.0.lvlibp</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 		</Item>
